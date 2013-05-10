@@ -143,7 +143,7 @@ def main():
         #go to mountain
         if choice == "1":
             print("You begin your journey to the Firey Mountain.")
-            fireyMoutain()
+            fireyMountain()
             #deciding between the cave or the path
             choice = chooseDir()
             #go to cave
@@ -158,11 +158,92 @@ def main():
                     print("After an attempt to eat you the dragons neck")
                     print("Is exposed and you decapitate him.")
                     print("Congradulations on saving the land.")
+                #if sneak attack
                 elif choice == "2":
                     print("The dragon wasn't actually sleeping.")
                     print("As you try to sneak around him he takes")
                     print("One big gulp and eats you.")
-                else
+                else:
                     print ("Please make a valid choice")
-############ NEED TO FINISH FIRST VERSION LATER ##################################
+            #go to the path
+            elif choice == "2":
+                print("You walk towards the path.")
+                thePath()
+                #continue to climb or try to climb down
+                choice = chooseDir()
+                #if they climb back down
+                if choice == "1":
+                    print("You start to climb back down the mountain.")
+                    print("As you begin your decent your leg slips.")
+                    print("You try to grab hold but you miss and fall...")
+                #if they decide to climb up
+                elif choice == "2":
+                    print("You choose to struggle on climbing higher.")
+                    print("Suddenly the mountain begins to rumble.")
+                    print("Fire and brimstone rain from above as the") 
+                    print("firey mountain erupts.")
+                    print("Lava begins to pour from above engulfing you.")
+                else:
+                    print("Please make a valid choice")
+            else:
+                print("Please make a valid choice")
+        #go to forest
+        elif choice == "2":
+            print("You walk towards the forest")
+            darkForest()
+            #go towards the water or the light
+            choice = chooseDir()
+            #if they choose the water
+            if choice == "1":
+                print("You begin to follow the sound")
+                theRiver()
+                #try to cross or follow clearing
+                choice = chooseDir()
+                #if they try to cross
+                if choice == "1":
+                    print("You attempt to make your way across the river.")
+                    print("Once you get halfway through you realize")
+                    print("the river is deeper then you hoped and your armor drags")
+                    print("you down.")
+                #if they follow the river
+                elif choice == "2":
+                    print("Following the path of the river you come to a clearing.")
+                    print("In the middle of the clearing you see a golden sword")
+                    print("placed into a stone.")
+                    print("Walking up to the sword you pull it from the stone.")
+                else:
+                    print("Please make a vaild choice")
+                #they choose the light
+            elif choice == "2":
+                print("You work your way towards the light.")
+                theCabin()
+                #go in the cabin or go around
+                choice = chooseDir()
+                #if they go in the cabin
+                if choice == "1":
+                    print("You enter the cabin.")
+                    print("Inside you find a group of bandits.")
+                    print("The bandits steal all your armor and equipment.")
+                    print("They then leave you bare in the woods.")
+                #if they try to go around
+                elif choice == "2":
+                    print("You try to go around the cabin.")
+                    print("As you pass by you hear a wire trip.")
+                    print("Looking to your left your met with an arrow between the eyes")
+                else:
+                    print("Please make a valid choice")
+            else:
+                print("Please make a valid choice")
+        else:
+            print("Please make a valid choice")
+        #ask user to play again
+        print("Do you wish to play again?")
+        print("1: Yes")
+        print("2: No")
+        choice = chooseDir()
+        if choice == "2":
+            play = False
+
+if __name__ == "__main__": main()
+
                     
